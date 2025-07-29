@@ -23,7 +23,7 @@ import joblib
 def main():
     st.title("Classification Model using Streamlit")
 
-    uploaded_file = st.file_uploader("Upload CSV or Excel file", type=["csv", "xlsx"])
+    uploaded_file = st.file_uploader("Upload File with target Variable as 'Dependent'", type=["csv", "xlsx"])
     if uploaded_file is not None:
         if uploaded_file.name.endswith('.csv'):
             df = pd.read_csv(uploaded_file)
